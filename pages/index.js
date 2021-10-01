@@ -15,7 +15,7 @@ export default function Home(props) {
 
 const LunchCard = ({lunchData}) => {
   const { data, error } = useSWR(
-    "http://localhost:3000/api/lunch",
+    "/api/lunch",
     fetcher, { refreshInterval: 180*1000 }
   );
   if(!data){
